@@ -5,11 +5,6 @@ import { addToDo } from "../redux/actions";
 
 function ToDoInput(props) {
   const nameRef = useRef();
-  // function handleSubmit(e, addToDo) {
-  //   e.preventDefault();
-  //   addToDo(nameRef, id);
-  //   nameRef.current.value = "";
-  // }
   return (
     <Container fluid>
       <Row className="my-4 justify-content-center">
@@ -17,7 +12,6 @@ function ToDoInput(props) {
           onSubmit={(e) => {
             e.preventDefault();
             const input = nameRef.current.value;
-            console.log(input);
             props.dispatch(addToDo(input));
             nameRef.current.value = "";
           }}
@@ -32,11 +26,5 @@ function ToDoInput(props) {
     </Container>
   );
 }
-
-// const mapStateToProps = (state) => {
-//   return { todos: state.todos };
-// };
-
-// const mapDispatchToProps = { addToDo: addToDo };
 
 export default connect()(ToDoInput);
