@@ -6,6 +6,7 @@ import { deleteToDo } from "../redux/actions";
 function ToDoList(props) {
   return (
     <Container>
+      <p className="text-danger">Edit button is under contruction!</p>
       <ul className="list-group my-2">
         {props.todos.map((todo) => (
           <li className="list-group-item d-flex justify-content-between align-items-center">
